@@ -81,25 +81,21 @@
             <!-- PLANET -->
             <div class="destination-planet-image">
                 <picture>
-                    <img src="../../Assets/Image/moon.png" alt="">
+                    <img class="planet-image" src="" alt="">
                 </picture>
                 <div class="mask"></div>
             </div>
 
             <!-- PLANET LIST -->
              <div class="destination-planet-list">
-                <a class="selected" href="http://127.0.0.1:5500/Pages/Destination/moon.html">Moon</a>
-                <a href="http://127.0.0.1:5500/Pages/Destination/mars.html">Mars</a>
-                <a href="http://127.0.0.1:5500/Pages/Destination/europa.html">Europa</a>
-                <a href="http://127.0.0.1:5500/Pages/Destination/titan.html">Titan</a>
              </div>
 
              <!-- PLANET NAME -->
               <div class="destination-planet-name-description">
-                  <h1 class="destination-planet-name">Moon</h1>
+                  <h1 class="destination-planet-name"></h1>
                   <!-- PLANET DESCRIPTION -->
                   <p class="destination-planet-description">
-                    See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+                   
                   </p>
               </div>
 
@@ -110,13 +106,17 @@
               <!-- PLANET INFORMATIONS -->
                 <div class="destination-planet-informations">
                     <span class="information">Avg. Distance</span>
-                    <span class="value">384,400 km</span>
+                    <span class="value distance"></span>
                 </div>
                 <div class="destination-planet-informations">
                     <span class="information">Est. Travel Time</span>
-                    <span class="value">3 days</span>
+                    <span class="value travelTime"></span>
                 </div>
          </main>
+
+
+    <script type="module" src="--data-planets.js"></script>
+    <script type="module" src="--constructTemplate.js"></script>
     <script type="module" src="../--openMenu.js"></script>
 </body>
 </html>

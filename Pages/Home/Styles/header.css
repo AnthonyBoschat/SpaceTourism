@@ -14,15 +14,18 @@ header{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 
-    svg{
+    svg.logo{
         fill: var(--light);
         width: 2.5rem;
         height: 2.5rem;
     }
-
-    svg.menu-button{
-        width: 2rem;
-        height: 2rem;
-        fill: var(--text);
+    
+    button.menu-button{
+        svg{
+            width: 2rem;
+            height: 2rem;
+            fill: var(--text);
+        }
     }
+
 }

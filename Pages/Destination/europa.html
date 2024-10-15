@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="Styles/planet-name-description.css">
     <link rel="stylesheet" href="Styles/planet-informations.css">
     <link rel="stylesheet" href="../Home/Styles/header.css">
+    <link rel="stylesheet" href="../Home/Styles/phoneNavigationMenu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,6 +24,36 @@
 
 </head>
 <body>
+
+        <nav class="phone-navigation-container closed">
+            <div class="navigation-layout">
+                <div class="close-menu-layout">
+                    <button class="close-phone-navigation-button">
+                        <svg  width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Group">
+                            <rect id="Rectangle Copy" x="2.5752" y="0.954102" width="24" height="3" transform="rotate(45 2.5752 0.954102)" fill="#D0D6F9"/>
+                            <rect id="Rectangle Copy 3" x="0.454102" y="17.9246" width="24" height="3" transform="rotate(-45 0.454102 17.9246)" fill="#D0D6F9"/>
+                            </g>
+                        </svg>    
+                    </button>
+                </div>
+                <div class="nav-button-layout">
+                    <a class="selected" href="http://127.0.0.1:5500/Pages/Home/index.html">
+                        <span>00</span>Home
+                    </a>
+                    <a href="http://127.0.0.1:5500/Pages/Destination/moon.html">
+                        <span>01</span>Destination
+                    </a>
+                    <a href="#">
+                        <span>02</span>Crew
+                    </a>
+                    <a href="#">
+                        <span>03</span>Technology
+                    </a>
+                </div>
+            </div>
+        </nav>
+
         <!-- HEADER -->
         <header>
             <a href="http://127.0.0.1:5500/Pages/Home/index.html">
@@ -31,9 +62,12 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17"/>
                 </svg>
             </a>
-            <svg class="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
-            </svg>
+
+            <button class="menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+                </svg>
+            </button>
          </header>
 
          <main>
@@ -82,6 +116,6 @@
                     <span class="value">3 years</span>
                 </div>
          </main>
-
+    <script type="module" src="../openMenu.js"></script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+nav.phone-navigation-container{
+    z-index: 100;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    &.closed{
+        display: none;
+    }
+
+    .navigation-layout{
+        width: 15.875rem;
+        height: 100%;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(2.5rem);
+        gap: 4rem;
+
+        .close-menu-layout{
+            backdrop-filter: blur(0px);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            fill: var(--light);
+            margin-top: 2rem;
+            margin-right: 1.5rem;
+        }
+
+        .nav-button-layout{
+            position: relative;
+            font-family: "Barlow Condensed";
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            z-index: 101;
+            text-transform: uppercase;
+            font-weight: 300;
+
+            a.selected::after{
+                position: absolute;
+                content: ("");
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 2px;
+                background-color: var(--light);
+            }
+            a{
+                
+                position: relative;
+                padding-left: 2rem;
+                width: 100%;
+                letter-spacing: 2.7px;
+                text-decoration: none;
+                color: var(--light);
+                display: flex;
+                gap: 11px;
+
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

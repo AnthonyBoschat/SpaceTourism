@@ -1,0 +1,35 @@
+div.destination-planet-list{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+
+    a{
+        text-decoration: none;
+        position: relative;
+        background: none;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 2.36px;
+        font-size: 0.875rem;
+        color: var(--text);
+        padding: 0;
+    }
+
+    a:hover{
+        cursor: pointer;
+        color: var(--light);
+    }
+
+    a.selected{
+        color: var(--light);
+    }
+    a.selected::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -0.5rem;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
+}

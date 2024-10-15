@@ -1,0 +1,6 @@
+p.destination-planet-description{
+    color: var(--text);
+    line-height: 25px;
+    text-align: center;
+    font-family: "Barlow";
+}

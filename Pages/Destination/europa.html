@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="../../Styles/Global/reset.css">
+    <link rel="stylesheet" href="../../Styles/Global/variables.css">
+    <link rel="stylesheet" href="../../Styles/Global/font.css">
+    <link rel="stylesheet" href="../../Styles/Global/animation.css">
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/separator.css">
+    <link rel="stylesheet" href="Styles/instruction.css">
+    <link rel="stylesheet" href="Styles/planet-image.css">
+    <link rel="stylesheet" href="Styles/planet-list.css">
+    <link rel="stylesheet" href="Styles/planet-name-description.css">
+    <link rel="stylesheet" href="Styles/planet-informations.css">
+    <link rel="stylesheet" href="../Home/Styles/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <!-- HEADER -->
+        <header>
+            <a href="http://127.0.0.1:5500/Pages/Home/index.html">
+                <svg class="logo" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17"/>
+                </svg>
+            </a>
+            <svg class="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+            </svg>
+         </header>
+
+         <main>
+            <!-- INSTRUCTION -->
+            <span class="instructions">
+                <span class="step">01</span>
+                <span>Pick your destination</span>
+            </span>
+
+            <!-- PLANET -->
+            <div class="destination-planet-image">
+                <picture>
+                    <img src="../../Assets/Image/europa.png" alt="">
+                </picture>
+                <div class="mask"></div>
+            </div>
+
+            <!-- PLANET LIST -->
+            <div class="destination-planet-list">
+                <a href="http://127.0.0.1:5500/Pages/Destination/moon.html">Moon</a>
+                <a href="http://127.0.0.1:5500/Pages/Destination/mars.html">Mars</a>
+                <a class="selected" href="http://127.0.0.1:5500/Pages/Destination/europa.html">Europa</a>
+                <a href="http://127.0.0.1:5500/Pages/Destination/titan.html">Titan</a>
+            </div>
+
+             <!-- PLANET NAME -->
+              <div class="destination-planet-name-description">
+                  <h1 class="destination-planet-name">Europa</h1>
+                  <!-- PLANET DESCRIPTION -->
+                  <p class="destination-planet-description">
+                    The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
+                  </p>
+              </div>
+
+
+              <!-- SEPARATOR -->
+              <div class="destination-separator"></div>
+
+              <!-- PLANET INFORMATIONS -->
+                <div class="destination-planet-informations">
+                    <span class="information">Avg. Distance</span>
+                    <span class="value">628 mil. km</span>
+                </div>
+                <div class="destination-planet-informations">
+                    <span class="information">Est. Travel Time</span>
+                    <span class="value">3 years</span>
+                </div>
+         </main>
+
+</body>
+</html>

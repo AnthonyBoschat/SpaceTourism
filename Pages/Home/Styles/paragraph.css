@@ -1,0 +1,35 @@
+div.home-paragraph{
+    /* outline: 1px solid red; */
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+
+    h1{
+        font-family: "Barlow Condensed";
+        text-transform: uppercase;
+        letter-spacing: 2.7px;
+        font-weight: 300;
+        font-size: 15px;
+
+        strong{
+            letter-spacing: 0px;
+            line-height: 6.25rem;
+            font-size: 5rem;
+            text-transform: uppercase;
+            font-family: "Bellefair";
+            color: var(--light);
+            font-weight: 300;
+        }
+    }
+    p:first-of-type{
+        display: flex;
+        align-items: flex-start;
+        font-size: 15px;
+        font-family: "Barlow";
+        line-height: 25px;
+        font-weight: 300;
+    }
+}

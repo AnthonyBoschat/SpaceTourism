@@ -1,0 +1,18 @@
+div.destination-planet-name-description{
+    text-align: center;
+
+    h1.destination-planet-name{
+        font-size: 3.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: var(--light);
+        font-family: "Bellefair";
+    }
+
+    p.destination-planet-description{
+        color: var(--text);
+        line-height: 25px;
+        text-align: center;
+        font-family: "Barlow";
+    }
+}

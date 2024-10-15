@@ -1,0 +1,17 @@
+div.destination-planet-image{
+    position: relative;
+    /* outline: 1px solid red; */
+    overflow: hidden;
+    border-radius: 50%;
+
+    div.mask{
+        position: absolute;
+        width: 290px;
+        height: 290px;
+        left: -50px;
+        top: -25px;
+        z-index: 2;
+        background: url("../../../Assets/Background/Oval.png");
+        background-repeat: no-repeat;
+    }
+}

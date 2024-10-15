@@ -1,0 +1,53 @@
+@keyframes navigation-hover-apparition{
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes home-explore-button-hover-apparition{
+    0%{
+        width: 9.3rem;
+        height: 9.3rem;
+    }80%{
+        width: 14rem;
+        height: 14rem;
+    }
+    100%{
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+@keyframes home-explore-button-hover-breath{
+    0%{
+        width: 9.3rem;
+        height: 9.3rem;
+    }100%{
+        width: 12rem;
+        height: 12rem;
+        opacity: 0;
+    }
+}
+
+@keyframes phone-navigation-apparition{
+    from{
+        transform: translateX(15.875rem);
+    }to{
+        transform: translateX(0rem);
+    }
+}
+.animationClass_phone-navigation-apparition{
+    animation: phone-navigation-apparition 0.3s ease-in-out forwards;
+}
+@keyframes phone-navigation-disparition{
+    from{
+        transform: translateX(0rem);
+    }to{
+        transform: translateX(15.875rem);
+    }
+}
+.animationClass_phone-navigation-disparition{
+    animation: phone-navigation-disparition 0.3s ease-in-out forwards;
+}

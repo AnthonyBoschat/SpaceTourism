@@ -20,11 +20,15 @@ header{
         height: 2.5rem;
     }
     
+    
     button.menu-button{
         svg{
             width: 2rem;
             height: 2rem;
             fill: var(--text);
+        }
+        @media(min-width: 425px){
+            display: none;
         }
     }
 

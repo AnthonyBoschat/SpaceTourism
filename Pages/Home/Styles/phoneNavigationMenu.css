@@ -1,19 +1,16 @@
 nav.phone-navigation-container{
-    z-index: 100;
     position:absolute;
+    z-index: 100;
     top: 0;
-    left: 0;
-    width: inherit;
+    right: 0;
+    width: 15.875rem;
     height: 100%;
     display: flex;
     justify-content: flex-end;
-
-    &.closed{
-        display: none;
-    }
+    transform: translateX(15.875rem);
 
     .navigation-layout{
-        width: 15.875rem;
+        width: 100%;
         height: 100%;
         /* background-color: red; */
         display: flex;

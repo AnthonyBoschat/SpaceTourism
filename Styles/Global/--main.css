@@ -1,0 +1,23 @@
+body{
+    width: 100vw;
+    height: 100%;
+    background-image: url("../../../Assets/Background/home.jpg");
+    background-size: cover;
+    gap: 1.25rem;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 6rem 1fr;
+    overflow: hidden;
+    position: relative;
+}
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+html{
+    overflow-x: hidden;
+}

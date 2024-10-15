@@ -2,6 +2,8 @@ div.destination-planet-list{
     display: flex;
     align-items: center;
     gap: 26px;
+    font-family: "Barlow Condensed";
+
 
     a{
         text-decoration: none;

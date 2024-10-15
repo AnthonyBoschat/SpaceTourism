@@ -1,8 +1,8 @@
 const menuButton = document.querySelector(".menu-button")
 const closeNavigationButton = document.querySelector(".close-phone-navigation-button")
-const navigationContainer = document.querySelector(".phone-navigation-container")
+const navigationContainer = document.querySelector(".navigation-container")
 
-const handleOpenPhoneNavigationMenu = () => {
+const handleOpennavigation = () => {
     if(navigationContainer){
         // Si le menu de navigation sur téléphone est fermer
         if(navigationContainer.classList.contains("closed")){
@@ -14,7 +14,7 @@ const handleOpenPhoneNavigationMenu = () => {
     }
 }
 
-const handleClosePhoneNavigationMenu = () => {
+const handleClosenavigation = () => {
     if(navigationContainer){
         // Si le menu de navigation sur téléphone est ouvert
         if(!navigationContainer.classList.contains("closed")){
@@ -30,5 +30,5 @@ const handleClosePhoneNavigationMenu = () => {
     }
 }
 
-menuButton.addEventListener("click", handleOpenPhoneNavigationMenu, true)
-closeNavigationButton.addEventListener("click", handleClosePhoneNavigationMenu, true)
+menuButton.addEventListener("click", handleOpennavigation, true)
+closeNavigationButton.addEventListener("click", handleClosenavigation, true)

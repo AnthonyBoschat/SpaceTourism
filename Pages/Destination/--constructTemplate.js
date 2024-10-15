@@ -44,7 +44,6 @@ const changeSelectedPlanet = (e) => {
 
 const attachListenerPlanetButton = () => {
     const planetsButtons = document.querySelectorAll(".onePlanet")
-    console.log(planetsButtons)
     planetsButtons.forEach(button => {
         button.addEventListener("click", (e) => changeSelectedPlanet(e))
     })

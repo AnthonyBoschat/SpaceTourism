@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Styles/Global/--reset.css">
+    <link rel="stylesheet" href="../../Styles/Global/--variables.css">
+    <link rel="stylesheet" href="../../Styles/Global/--font.css">
+    <link rel="stylesheet" href="../../Styles/Global/--animation.css">
+    <link rel="stylesheet" href="../../Styles/Global/--main.css">
+    <link rel="stylesheet" href="../../Styles/Global/header.css">
+    <link rel="stylesheet" href="../../Styles/Global/navigation.css">
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/instruction.css">
+    <link rel="stylesheet" href="Styles/crew-description.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="navigation-container closed">
+        <div class="navigation-layout">
+            <div class="close-menu-layout">
+                <button class="close-phone-navigation-button">
+                    <svg  width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group">
+                        <rect id="Rectangle Copy" x="2.5752" y="0.954102" width="24" height="3" transform="rotate(45 2.5752 0.954102)" fill="#D0D6F9"/>
+                        <rect id="Rectangle Copy 3" x="0.454102" y="17.9246" width="24" height="3" transform="rotate(-45 0.454102 17.9246)" fill="#D0D6F9"/>
+                        </g>
+                    </svg>    
+                </button>
+            </div>
+            <div class="nav-button-layout">
+                <a class="selected" href="http://127.0.0.1:5500/Pages/Home/index.html">
+                    <span>00</span>Home
+                </a>
+                <a href="http://127.0.0.1:5500/Pages/Destination/index.html">
+                    <span>01</span>Destination
+                </a>
+                <a href="http://127.0.0.1:5500/Pages/Crew/index.html">
+                    <span>02</span>Crew
+                </a>
+                <a href="#">
+                    <span>03</span>Technology
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+     <header>
+        <a href="http://127.0.0.1:5500/Pages/Home/index.html">
+            <svg class="logo" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="24" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17"/>
+            </svg>
+        </a>
+
+        <button class="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+            </svg>
+        </button>
+     </header>
+
+     <main>
+        <!-- INSTRUCTION -->
+        <span class="instructions">
+            <span class="step">02</span>
+            <span>Meet your crew</span>
+        </span>
+
+        <!-- CREW-IMAGE -->
+         <section class="crew-photo">
+            <picture>
+                <img src="/Assets/Crew/douglasHurley.png" alt="">
+            </picture>
+         </section>
+
+         <!-- CREW-DESCRIPTION -->
+         <section class="crew-description">
+
+            <ul class="crew-carousel">
+                <li class="selected"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+
+            <div class="crew-role-name-layout">
+                <span class="crew-role">Commander</span>
+                <span class="crew-name">Douglas Hurley</span>
+            </div>
+
+            <div class="crew-presentation-layout">
+                <p class="crew-presentation">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+            </div>
+         </section>
+
+
+     </main>
+    
+     <script src="../--openMenu.js"></script>
+</body>
+</html>

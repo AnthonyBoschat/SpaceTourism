@@ -1,3 +1,14 @@
+picture{
+    /* outline: 1px solid red; */
+    position: relative;
+    display: flex;
+
+    img{
+        transition: all 0.3s;
+        position: relative;
+    }
+}
+
 section.crew-description{
     /* outline: 1px solid red; // */
     display: flex;

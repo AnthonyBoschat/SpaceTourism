@@ -19,6 +19,7 @@ const constructTemplate = () => {
     crewRoleDOM.innerHTML = selectedCrewMember.role
     crewPresentationDOM.innerHTML = selectedCrewMember.presentation
     crewPhotoDOM.src = selectedCrewMember.image
+    crewPhotoDOM.dataset.membername = selectedCrewMember.name
 }
 
 const constructCarouselPoint = () => {
@@ -29,12 +30,23 @@ const constructCarouselPoint = () => {
     crewCarouselPoints.innerHTML = points
 }
 
-const changeSelectedCrewMember = (e) => {
-    const memberNameClicked = e?.srcElement?.dataset?.membername
-    if(memberNameClicked)
-    {
+export const changeSelectedCrewMember = (e, manuallySelectedMember = null) => {
+    if(!manuallySelectedMember && e){
+        const memberNameClicked = e?.srcElement?.dataset?.membername
+        if(memberNameClicked)
+        {
+            const newDataCrew = dataCrews.map(crewMember => {
+                crewMember.selected = crewMember.name === memberNameClicked ? true : false
+                return crewMember
+            })
+            dataCrews = newDataCrew
+            main()
+        }
+    }
+    
+    if(!e && manuallySelectedMember){
         const newDataCrew = dataCrews.map(crewMember => {
-            crewMember.selected = crewMember.name === memberNameClicked ? true : false
+            crewMember.selected = crewMember.name === manuallySelectedMember ? true : false
             return crewMember
         })
         dataCrews = newDataCrew

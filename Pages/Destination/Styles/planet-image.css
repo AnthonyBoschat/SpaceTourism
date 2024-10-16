@@ -1,17 +1,22 @@
 div.destination-planet-image{
-    position: relative;
     /* outline: 1px solid red; */
+    position: relative;
     overflow: hidden;
     border-radius: 50%;
+    box-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.7) inset;
 
     div.mask{
         position: absolute;
-        width: 290px;
-        height: 290px;
-        left: -50px;
-        top: -25px;
+        width: 200%;
+        height: 200%;
+        left: -25%;
+        top: -25%;
         z-index: 2;
         background: url("../../../Assets/Background/Oval.png");
         background-repeat: no-repeat;
+
+        /* left: -75%;
+        top: -75%; */
     }
 }
+

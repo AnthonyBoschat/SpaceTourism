@@ -3,4 +3,7 @@ p.destination-planet-description{
     line-height: 25px;
     text-align: center;
     font-family: "Barlow";
+    /* min-height: 500px; */
+    /* outline: 1px solid red;
+    color: red; */
 }

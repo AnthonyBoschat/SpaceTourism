@@ -1,5 +1,7 @@
 body{
     background-image: url("/Assets/Background/destination.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 main{
     font-family: "Barlow Condensed";

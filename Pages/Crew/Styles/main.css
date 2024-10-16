@@ -3,6 +3,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     gap: 0;
+    margin-bottom: 6.5rem;
 }
 main{
     font-family: "Barlow Condensed";

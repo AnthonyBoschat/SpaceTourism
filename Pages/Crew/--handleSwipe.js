@@ -49,67 +49,48 @@ photoDOM.addEventListener("touchend", (e) => {
 
 // Détermine l'action à effectuer après le listener touchend
 function handleSwipe(e, touchEndX) {
-    // Si swiper vers la droite
-    if (touchEndX < touchStartX) {
-        if(touchStartX - touchEndX < 150){ // Limite à partir de laquelle le crewMember change = déplacement de 150px, si pas assez
+    const direction =   touchEndX < touchStartX ? "right" :
+                        touchEndX > touchStartX ? "left" :
+                        null
+    
+    if(direction){
+        const nextCrewMemberName = determineNextMemberCrew(e.target.dataset.membername, direction)
+        // Si aucun prochain membre d'équipage trouver, on repositionne l'image au centre ou si l'image n'a pas été suffisament déplacer (150px de décalage )
+
+        if(!nextCrewMemberName 
+            || 
+            (direction === "right" ? 
+            touchStartX - touchEndX < 150 : 
+            touchEndX - touchStartX < 150)
+        ){ 
             photoDOM.style.left = initialLeft // Retour à la position initial
             resetOpacity() // Reset de l'opacité
             return
+        }else{
+            // Sinon le swipe est valider
+            console.log(`Swiped ${direction}`);
+            // On détermine l'opacité de l'image à 0 pour permettre son déplacement de l'autre coté sans pouvoir être vu
+            photoDOM.style.opacity = 0
+            // On change le membre de l'équipage à afficher
+            changeSelectedCrewMember(null, nextCrewMemberName)
+            // Selon la position initial on place l'image de l'autre coté
+            photoDOM.style.left = `${initialLeft - (parseInt(photoDOM.style.left) / 2)}px`
+            // Une fois la nouvelle image positionner de l'autre coté, et toujours camoufler avec l'opacité, on peut la faire revenir au centre et l'afficher de nouveau.
+            setTimeout(() => {
+                photoDOM.style.left = initialLeft
+                resetOpacity()
+            }, 300);
         }
-        console.log('Swiped right');
-        // Sinon le swipe est valider
-        // On détermine l'opacité de l'image à 0 pour permettre son déplacement de l'autre coté sans pouvoir être vu
-        photoDOM.style.opacity = 0
-        // Selon la position initial on place l'image de l'autre coté
-        photoDOM.style.left = `${initialLeft - (parseInt(photoDOM.style.left) / 2)}px`
-        // On détermine quel est le prochain membre de l'équipage à afficher. Direction "right"
-        determineNextMemberCrew(e.target.dataset.membername, "right")
-
-        // Une fois la noiuvelle image positionner de l'autre coté, et toujours camoufler avec l'opacité, on peut la faire revenir au centre et l'afficher de nouveau.
-        setTimeout(() => {
-            photoDOM.style.left = initialLeft
-            resetOpacity()
-        }, 300);
-    }
-
-    // Si swiper vers la gauche
-    if (touchEndX > touchStartX) {
-        if(touchEndX - touchStartX < 150){
-            photoDOM.style.left = initialLeft
-            resetOpacity()
-            return
-        }
-        console.log('Swiped left');
-        determineNextMemberCrew(e.target.dataset.membername, "left")
-        photoDOM.style.opacity = 0
-        photoDOM.style.left = `${initialLeft - (parseInt(photoDOM.style.left) / 2)}px`
-        setTimeout(() => {
-            photoDOM.style.left = initialLeft
-            resetOpacity()
-        }, 300);
-
     }
 }
 
 const determineNextMemberCrew = (crewMemberName, direction) => {
     const memberIndex = crews.findIndex(crewMember => crewMember.name === `${crewMemberName}`)
-    switch(direction){
-
-        case "right":
-            if(crews[memberIndex + 1]){
-                changeSelectedCrewMember(null, crews[memberIndex + 1].name)   
-            }
-            return
-
-        case "left":
-            if(crews[memberIndex - 1]){
-                changeSelectedCrewMember(null, crews[memberIndex - 1].name)   
-            }
-            return
-            
-        default:
-            return
-    }
+    return crews[
+        direction === "right" ? memberIndex + 1 : 
+        direction === "left" ? memberIndex - 1 : 
+        memberIndex
+                ]?.name || false
 }
 
 

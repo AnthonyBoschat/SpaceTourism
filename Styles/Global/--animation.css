@@ -75,12 +75,8 @@
 
 /* PAGE DESTINATION : Créer un fondu pour le contenu le temps de l'animation du mask d'ombrage */
 @keyframes opacity-out-in{
-    0%{
-        opacity: 1;
-    }50%{
+    50%{
         opacity: 0;
-    }100%{
-        opacity: 1;
     }
 }
 .animationClass_opacity-out-in-1000{

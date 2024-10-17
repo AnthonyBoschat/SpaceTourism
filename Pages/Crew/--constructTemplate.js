@@ -30,6 +30,13 @@ const constructCarouselPoint = () => {
     crewCarouselPoints.innerHTML = points
 }
 
+export const toggleAnimationChangedCrewMember = () => {
+    crewNameDOM.classList.add("animationClass_opacity-out-in-1000")
+    crewRoleDOM.classList.add("animationClass_opacity-out-in-1000")
+    crewPresentationDOM.classList.add("animationClass_opacity-out-in-1000")
+    crewPhotoDOM.classList.add("animationClass_opacity-out-in-1000")
+}
+
 export const changeSelectedCrewMember = (e, manuallySelectedMember = null) => {
     if(!manuallySelectedMember && e){
         const memberNameClicked = e?.srcElement?.dataset?.membername
@@ -40,7 +47,19 @@ export const changeSelectedCrewMember = (e, manuallySelectedMember = null) => {
                 return crewMember
             })
             dataCrews = newDataCrew
-            main()
+            constructCarouselPoint()
+            toggleAnimationChangedCrewMember()
+            setTimeout(() => {
+                constructTemplate()
+                attachListenerCarouselPoint()
+            }, 500);
+
+            setTimeout(() => {
+                crewNameDOM.classList.remove("animationClass_opacity-out-in-1000")
+                crewRoleDOM.classList.remove("animationClass_opacity-out-in-1000")
+                crewPresentationDOM.classList.remove("animationClass_opacity-out-in-1000")
+                crewPhotoDOM.classList.remove("animationClass_opacity-out-in-1000")
+            }, 1000);
         }
     }
     

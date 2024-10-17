@@ -9,6 +9,9 @@ picture{
     }
 }
 
+.crew-name, .crew-role, .crew-presentation{
+    transition: opacity 0.3s;
+}
 section.crew-description{
     /* outline: 1px solid red; // */
     display: flex;

@@ -53,18 +53,20 @@ function handleSwipe(e, touchEndX) {
     if (touchEndX < touchStartX) {
         if(touchStartX - touchEndX < 150){ // Limite à partir de laquelle le crewMember change = déplacement de 150px, si pas assez
             photoDOM.style.left = initialLeft // Retour à la position initial
-            resetOpacity() // Reset de l'opaciter
-            console.log("not so long")
+            resetOpacity() // Reset de l'opacité
             return
         }
-        // Sinon le swipe est valider
         console.log('Swiped right');
-        // On détermine 
+        // Sinon le swipe est valider
+        // On détermine l'opacité de l'image à 0 pour permettre son déplacement de l'autre coté sans pouvoir être vu
         photoDOM.style.opacity = 0
+        // Selon la position initial on place l'image de l'autre coté
         photoDOM.style.left = `${initialLeft - (parseInt(photoDOM.style.left) / 2)}px`
+        // On détermine quel est le prochain membre de l'équipage à afficher. Direction "right"
         determineNextMemberCrew(e.target.dataset.membername, "right")
+
+        // Une fois la noiuvelle image positionner de l'autre coté, et toujours camoufler avec l'opacité, on peut la faire revenir au centre et l'afficher de nouveau.
         setTimeout(() => {
-            
             photoDOM.style.left = initialLeft
             resetOpacity()
         }, 300);
@@ -72,10 +74,9 @@ function handleSwipe(e, touchEndX) {
 
     // Si swiper vers la gauche
     if (touchEndX > touchStartX) {
-        if(touchEndX - touchStartX < 150){ // Limite à partir de laquelle le crewMember change = déplacement de 150px
+        if(touchEndX - touchStartX < 150){
             photoDOM.style.left = initialLeft
             resetOpacity()
-            console.log("not so long")
             return
         }
         console.log('Swiped left');

@@ -15,6 +15,7 @@ const detectSelectedPlanet = () => {
     const selectedPlanet = dataPlanets.find(planet => planet.selected === true)
     return selectedPlanet
 }
+
 const constructTemplate = () => {
     const selectedPlanet = detectSelectedPlanet()
     planetNameDOM.innerHTML = selectedPlanet.name

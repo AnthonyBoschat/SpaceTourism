@@ -85,7 +85,7 @@
 
 
 /* PAGE DESTINATION : Rend les boutons de nom de planete cliquable désactiver le temps de la transition */
-@keyframes make-disabled-planet-button-list{
+@keyframes make-disabled{
     0%{
         pointer-events: none;
         opacity: 1;
@@ -97,6 +97,6 @@
         opacity: 1;
     }
 }
-.animationClass_make-disabled-planet-button-list{
-    animation: make-disabled-planet-button-list 1s ease-in-out forwards;
+.animationClass_make-disabled{
+    animation: make-disabled 1s ease-in-out forwards;
 }

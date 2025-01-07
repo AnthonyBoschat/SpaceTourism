@@ -1,0 +1,65 @@
+main{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+section.techno-carousel{
+    font-family: "Bellefair";
+    font-size: 16px;
+    /* outline: 1px solid white; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    button{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        outline: 1px solid hsla(0, 0%, 100%, 0.25);
+        color: var(--light);
+
+        &.selected{
+            background-color: var(--light);
+            color:#0B0D17;
+        }
+    }
+}
+
+section.description{
+    margin-left: 24px;
+    margin-right: 24px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    color: var(--text);
+
+    .terminology{
+        letter-spacing: 2.36px;
+        text-transform: uppercase;
+        font-family: "Barlow Condensed";
+        font-size: 14px;
+    }
+
+    .techno-name{
+        color:var(--light);
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: "Bellefair";
+    }
+
+    .techno-description{
+        margin-top: 1rem;
+        text-align: center;
+        font-family: "Barlow";
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 25px;
+    }
+}

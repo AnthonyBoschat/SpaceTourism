@@ -1,0 +1,16 @@
+span.instructions{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    span{
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2.7px;
+        color: var(--light);
+    }
+
+    .step{
+        opacity: 0.24;
+    }
+}

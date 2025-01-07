@@ -63,7 +63,7 @@ const changeSelectedPlanet = (e) => {
     // Ajoute des classes d'animation de désactivation pour les boutons de nom de planète ( afin de ne pas pouvoir spammer trop rapidement et faire sauter les animations )
     const planetsButtons = document.querySelectorAll(".onePlanet")
     planetsButtons.forEach(button => {
-        button.classList.add("animationClass_make-disabled-planet-button-list")
+        button.classList.add("animationClass_make-disabled")
     })
 
     // A la moitier des animations on change le contenu de la page + On rattache les listener
@@ -82,7 +82,7 @@ const changeSelectedPlanet = (e) => {
 
         const planetsButtons = document.querySelectorAll(".onePlanet")
         planetsButtons.forEach(button => {
-            button.classList.remove("animationClass_make-disabled-planet-button-list")
+            button.classList.remove("animationClass_make-disabled")
         })
     }, 1000);
 }

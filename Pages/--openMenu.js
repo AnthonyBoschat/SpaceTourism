@@ -1,6 +1,6 @@
 const menuButton = document.querySelector(".menu-button")
 const closeNavigationButton = document.querySelector(".close-phone-navigation-button")
-const navigationContainer = document.querySelector(".navigation-container")
+const navigationContainer = document.querySelector(".small-navigation-container")
 
 const handleOpennavigation = () => {
     if(navigationContainer){

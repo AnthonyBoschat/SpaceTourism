@@ -11,8 +11,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 6rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    position: relative;
+
 
     svg.logo{
         fill: var(--light);
@@ -27,9 +30,68 @@ header{
             height: 2rem;
             fill: var(--text);
         }
-        @media(min-width: 425px){
+        @media(min-width: 768px){
             display: none;
         }
     }
 
+    .large-navigation-container{
+        display: none;
+        @media(min-width: 768px){
+            position: absolute;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 100%;
+            background-color: hsla(0, 0%, 100%, 0.04);
+            backdrop-filter: blur(5rem);
+            padding-right: 5vw;
+            gap: 48px;
+
+            a{
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 2.36px;
+                font-family: "Barlow Condensed";
+                font-weight: 500;
+                text-decoration: none;
+                font-size: 14px;
+                /* outline: 1px solid white; */
+                height: 100%;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                &.nav-selected{
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: white;
+                    }
+                }
+
+                &.nav-unselected:hover{
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: rgba(255, 255, 255, 0.3);
+                    }
+
+                }
+            }
+        }
+    }
+    
 }
+
+
